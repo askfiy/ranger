@@ -1,27 +1,34 @@
 # README
 
-## icons support
-
-For image support, copy and paste the following code:
+Dependencies:
 
 ```
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+$ yay -S w3m ?
+$ yay -S ueberzug
+$ yay -S ffmpegthumbnailer
+$ yay -S ffmpeg
+$ yay -S mediainfo
+$ yay -S highlight
+$ yay -S fzf
+$ yay -S trash-cli
+$ yay -S atool
+$ yay -S poppler
+$ yay -S catdoc
+$ yay -S docx2txt
+$ yay -S xlsx2csv
 ```
 
-## image preview
-
-requires download:
+Icons support:
 
 ```
-yay -S ueberzug
+$ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
 
-
-## custom keys
-
-Here are some custom buttons:
+Custom mapping:
 
 ```
+# map F fzf_select
+# map M console mkcd%space
 map cw eval fm.execute_console("bulkrename") if fm.thisdir.marked_items else fm.open_console("rename ")
 map DD shell gio trash %s
 map M console mkdir%space
